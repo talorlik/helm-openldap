@@ -152,11 +152,11 @@ Parameters related to Kubernetes.
 | `serviceReadOnly.type`                     | Service type can be ClusterIP, NodePort, LoadBalancer                                                             | `ClusterIP`         |
 | `serviceReadOnly.ipFamilyPolicy`                   | Represents the dual-stack-ness requested or required by this Service.                                             | `SingleStack`       |
 | `serviceReadOnly.externalTrafficPolicy`    | Sets the externalTrafficPolicy for this Service.                                                                  | `Cluster`           |
-| `persistence.enabled`                      | Whether to use PersistentVolumes or not                                                                           | `false`             |
-| `persistence.storageClass`                 | Storage class for PersistentVolumes.                                                                              | `<unset>`           |
-| `persistence.existingClaim`                | Add existing Volumes Claim.                                                                                       | `<unset>`           |
-| `persistence.accessMode`                   | Access mode for PersistentVolumes                                                                                 | `ReadWriteOnce`     |
-| `persistence.size`                         | PersistentVolumeClaim storage size                                                                                | `8Gi`               |
+|| `persistence.enabled`                      | Whether to use PersistentVolumes or not                                                                           | `false`             |
+|| `persistence.storageClass`                 | Storage class for PersistentVolumes.                                                                              | `<unset>`           |
+|| `persistence.existingClaim`                | Use existing PersistentVolumeClaim instead of creating new ones. When set, `storageClass` and `size` are ignored. | `<unset>`           |
+|| `persistence.accessMode`                   | Access mode for PersistentVolumes                                                                                 | `ReadWriteOnce`     |
+|| `persistence.size`                         | PersistentVolumeClaim storage size                                                                                | `8Gi`               |
 | `extraVolumes`                             | Allow add extra volumes which could be mounted to statefulset                                                     | None                |
 | `extraVolumeMounts`                        | Add extra volumes to statefulset                                                                                  | None                |
 | `customReadinessProbe`                     | Liveness probe configuration                                                                                      | `[see values.yaml]` |
